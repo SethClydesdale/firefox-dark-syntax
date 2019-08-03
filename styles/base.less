@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor, :host {
+atom-text-editor, atom-text-editor {
   background-color: #14171A;
   color: #A9BACB;
 
@@ -51,276 +51,276 @@ atom-text-editor, :host {
   }
 }
 
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
+atom-text-editor .search-results .syntax--marker .region,
+atom-text-editor .search-results .syntax--marker .region {
   background-color: transparent;
   border: 1px solid #5F7387;
 }
 
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
+atom-text-editor .search-results .syntax--marker.current-result .region,
+atom-text-editor .search-results .syntax--marker.current-result .region {
   border: 1px solid #FFF;
 }
 
-.comment {
+.syntax--comment {
   color: #777;
 }
 
-.keyword {
+.syntax--keyword {
   color: #D99B28;
 
-  &.control {
+  &.syntax--control {
     color: #D99B28;
   }
 
-  &.operator {
+  &.syntax--operator {
     color: #A9BACB;
 
-    &.delete, &.new, &.typeof, &.void, &.this, &.in {
+    &.syntax--delete, &.syntax--new, &.syntax--typeof, &.syntax--void, &.syntax--this, &.syntax--in {
       color: #D99B28;
     }
   }
 
-  &.other.special-method {
+  &.syntax--other.syntax--special-method {
     color: #46AFE3;
   }
 
-  &.other.unit {
+  &.syntax--other.syntax--unit {
     color: #70BF53;
   }
 }
 
-.storage {
+.syntax--storage {
   color: #D99B28;
 }
 
-.constant {
+.syntax--constant {
   color: #EB5368;
 
-  &.character.escape {
+  &.syntax--character.syntax--escape {
     color: #D96629;
   }
 
-  &.numeric {
+  &.syntax--numeric {
     color: #70BF53;
   }
 
-  &.other.color {
+  &.syntax--other.syntax--color {
     color: #EB5368;
   }
 
-  &.other.symbol {
+  &.syntax--other.syntax--symbol {
     color: red;
   }
 }
 
-.variable {
+.syntax--variable {
   color: #46AFE3;
 
-  &.interpolation {
+  &.syntax--interpolation {
     color: darken(#46AFE3, 10%);
   }
 
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
     color: #46AFE3;
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
 
-.string {
+.syntax--string {
   color: #D96629;
 
-  &.punctuation.definition.string {
+  &.syntax--punctuation.syntax--definition.syntax--string {
     color: #D96629;
   }
 
-  &.regexp {
+  &.syntax--regexp {
     color: #D96629;
 
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
     }
   }
 
-  &.other.link {
+  &.syntax--other.syntax--link {
     color: @red;
   }
 }
 
-.punctuation {
-  &.definition {
-    &.comment {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
       color: #777;
     }
 
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
       color: #A9BACB;
     }
 
-    &.heading,
-    &.identity {
+    &.syntax--heading,
+    &.syntax--identity {
       color: @blue;
     }
 
-    &.bold {
+    &.syntax--bold {
       color: @light-orange;
       font-weight: bold;
     }
 
-    &.italic {
+    &.syntax--italic {
       color: @purple;
       font-style: italic;
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: darken(@red, 10%);
   }
 
 }
 
-.support {
-  &.constant {
+.syntax--support {
+  &.syntax--constant {
     color:#46AFE3
   }
 
-  &.property-value {
+  &.syntax--property-value {
     color:#EB535C
   }
 
-  &.class {
+  &.syntax--class {
     color: #46AFE3;
   }
 
-  &.function  {
+  &.syntax--function  {
     color: #46AFE3;
 
-    &.any-method {
+    &.syntax--any-method {
       color: @blue;
     }
   }
 }
 
-.entity {
-  &.name.function {
+.syntax--entity {
+  &.syntax--name.syntax--function {
     color: #46AFE3;
   }
 
-  &.name.type {
+  &.syntax--name.syntax--type {
     color: #46AFE3;
   }
 
-  &.other.inherited-class {
+  &.syntax--other.syntax--inherited-class {
     color: @green;
   }
-  &.name.class, &.name.type.class {
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @light-orange;
   }
 
-  &.name.section {
+  &.syntax--name.syntax--section {
     color: @blue;
   }
 
-  &.name.tag {
+  &.syntax--name.syntax--tag {
     color: #DF80FF;
   }
 
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: #46AFE3;
 
-    &.id {
+    &.syntax--id {
       color: #DF80FF;
 
-      &.html {
+      &.syntax--html {
         color:#46AFE3
       }
     }
   }
 }
 
-.meta {
+.syntax--meta {
 
-  &.class {
+  &.syntax--class {
     color: @light-orange;
   }
 
-  &.link {
+  &.syntax--link {
     color: @orange;
   }
 
-  &.require {
+  &.syntax--require {
     color: @blue;
   }
 
-  &.selector {
+  &.syntax--selector {
     color: #46AFE3;
   }
 
-  &.separator {
+  &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color;
   }
 }
 
-.none {
+.syntax--none {
   color: @syntax-text-color;
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     color: @orange;
     font-weight: bold;
   }
 
-  &.changed {
+  &.syntax--changed {
     color: @purple;
   }
 
-  &.deleted {
+  &.syntax--deleted {
     color: @red;
   }
 
-  &.italic {
+  &.syntax--italic {
     color: @purple;
     font-style: italic;
   }
 
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
     color: @blue;
   }
 
-  &.inserted {
+  &.syntax--inserted {
     color: @green;
   }
 
-  &.list {
+  &.syntax--list {
     color: @red;
   }
 
-  &.quote {
+  &.syntax--quote {
     color: @orange;
   }
 
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
     color: @green;
   }
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
-  &.heading {
+  &.syntax--heading {
     color: @green;
   }
 }
 
 atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
+atom-text-editor([mini]) .scroll-view {
   padding-left: 1px;
 }
