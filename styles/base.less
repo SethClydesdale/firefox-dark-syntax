@@ -1,0 +1,326 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: #14171A;
+  color: #A9BACB;
+
+  .wrap-guide {
+    background-color: #2C343B;
+  }
+
+  .indent-guide {
+    color: #2C343B;
+  }
+
+  .invisible-character {
+    color: #2C343B;
+  }
+
+  .gutter {
+    background-color: #181D20;
+    color: #5F7387;
+
+    .line-number {
+      &.cursor-line {
+        background-color: #2C343B;
+        color: #5F7387;
+      }
+
+      &.cursor-line-no-selection {
+        color: #5F7387;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: #555;
+  }
+
+  .invisible {
+    color: #A9BACB;
+  }
+
+  .cursor {
+    color: #FFF;
+  }
+
+  .selection .region {
+    background-color: #2C343B;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid #5F7387;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid #FFF;
+}
+
+.comment {
+  color: #777;
+}
+
+.keyword {
+  color: #D99B28;
+
+  &.control {
+    color: #D99B28;
+  }
+
+  &.operator {
+    color: #A9BACB;
+
+    &.delete, &.new, &.typeof, &.void, &.this, &.in {
+      color: #D99B28;
+    }
+  }
+
+  &.other.special-method {
+    color: #46AFE3;
+  }
+
+  &.other.unit {
+    color: #70BF53;
+  }
+}
+
+.storage {
+  color: #D99B28;
+}
+
+.constant {
+  color: #EB5368;
+
+  &.character.escape {
+    color: #D96629;
+  }
+
+  &.numeric {
+    color: #70BF53;
+  }
+
+  &.other.color {
+    color: #EB5368;
+  }
+
+  &.other.symbol {
+    color: red;
+  }
+}
+
+.variable {
+  color: #46AFE3;
+
+  &.interpolation {
+    color: darken(#46AFE3, 10%);
+  }
+
+  &.parameter.function {
+    color: #46AFE3;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: #D96629;
+
+  &.punctuation.definition.string {
+    color: #D96629;
+  }
+
+  &.regexp {
+    color: #D96629;
+
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+
+  &.other.link {
+    color: @red;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: #777;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: #A9BACB;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      color: @light-orange;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: darken(@red, 10%);
+  }
+
+}
+
+.support {
+  &.constant {
+    color:#46AFE3
+  }
+
+  &.property-value {
+    color:#EB535C
+  }
+
+  &.class {
+    color: #46AFE3;
+  }
+
+  &.function  {
+    color: #46AFE3;
+
+    &.any-method {
+      color: @blue;
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: #46AFE3;
+  }
+
+  &.name.type {
+    color: #46AFE3;
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+  &.name.class, &.name.type.class {
+    color: @light-orange;
+  }
+
+  &.name.section {
+    color: @blue;
+  }
+
+  &.name.tag {
+    color: #DF80FF;
+  }
+
+  &.other.attribute-name {
+    color: #46AFE3;
+
+    &.id {
+      color: #DF80FF;
+
+      &.html {
+        color:#46AFE3
+      }
+    }
+  }
+}
+
+.meta {
+
+  &.class {
+    color: @light-orange;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @blue;
+  }
+
+  &.selector {
+    color: #46AFE3;
+  }
+
+  &.separator {
+    background-color: @gray;
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @green;
+  }
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
