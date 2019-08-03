@@ -1,7 +1,7 @@
 {
   "name": "firefox-dark-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A dark syntax theme for Atom based on the old Firefox developer tools dark theme.",
   "repository": "https://github.com/sethclydesdale/firefox-dark-syntax",
   "license": "MIT",
